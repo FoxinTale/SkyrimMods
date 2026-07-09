@@ -41,40 +41,40 @@ Keyword Property VendorItemSpellTome Auto
 Keyword Property VendorItemSoulGem Auto
 Keyword Property VendorItemGem Auto
 Keyword Property VendorItemClothing Auto
-Keyword Property VendorItemDaedricArtifact Auto
 Keyword Property VendorItemStaff Auto
 Keyword Property VendorItemJewelry Auto
-Keyword Property VendorItemFirewood Auto
 Keyword Property VendorItemScroll Auto
 Keyword Property VendorItemPoison Auto
 Keyword Property VendorItemClutter Auto
-
+Keyword Property VendorItemKey Auto
 
 ;========================================================================================================================================
 ;---------- FORMLISTS ----------
 ; Patch file mods can be further used to expand these lists with other, large mods if needed. 
 ;---------- Smithing Stuff Lists ----------
-Formlist Property SB_OresList Auto
-Formlist Property SB_IngotsList Auto
-Formlist Property SB_GemsList Auto
-Formlist Property SB_PeltsList Auto
-Formlist Property SB_LinensLeathersList Auto
+Formlist Property SB_Smithing_OresList Auto
+Formlist Property SB_Smithing_IngotsList Auto
+Formlist Property SB_Smithing_GemsList Auto
+Formlist Property SB_Smithing_PeltsList Auto
+Formlist Property SB_Smithing_LinensLeathersList Auto
+Formlist Property SB_Smithing_RemainsList Auto
 
 
 ;---------- Enchanting Stuff Lists ----------
-Formlist Property SB_FilledSoulGemsList Auto
-Formlist Property SB_EmptySoulGemsList Auto
+Formlist Property SB_Ench_FilledSoulGemsList Auto
+Formlist Property SB_Ench_EmptySoulGemsList Auto
 
 ;---------- Foodstuffs Lists ----------
-Formlist Property SB_RawMeatList Auto
-Formlist Property SB_FruitsVeggiesList Auto
-Formlist Property SB_CheeseList Auto
-Formlist Property SB_BoozeList Auto
-Formlist Property SB_CookedFoodsList Auto
-Formlist Property SB_BakedGoodsList Auto
-Formlist Property SB_DrinksList Auto
-Formlist Property SB_SweetsList Auto
-Formlist Property SB_FoodIngredientsList Auto
+Formlist Property SB_Food_RawMeatList Auto
+Formlist Property SB_Food_FruitsVeggiesList Auto
+Formlist Property SB_Food_CheeseList Auto
+Formlist Property SB_Food_BoozeList Auto
+Formlist Property SB_Food_CookedFoodsList Auto
+Formlist Property SB_Food_BakedGoodsList Auto
+Formlist Property SB_Food_DrinksList Auto
+Formlist Property SB_Food_SoupStewsList Auto
+Formlist Property SB_Food_SweetsList Auto
+Formlist Property SB_Food_IngredientsList Auto
 
 ;---------- Misc Stuff Lists ----------
 Formlist Property SB_CutleryList Auto
@@ -82,16 +82,17 @@ Formlist Property SB_DishesList Auto
 Formlist Property SB_BucketsList Auto
 Formlist Property SB_HousePartsList Auto
 Formlist Property SB_ToolsList Auto
+Formlist Property SB_WoodList Auto
 
 ;---------- Book Lists ----------
 Formlist Property SB_NotesList Auto
 Formlist Property SB_SpellTomesList Auto
 
 ;---------- Alchemy Lists ----------
-Formlist Property SB_SaltsList Auto
-Formlist Property SB_PoisonsList Auto
-Formlist Property SB_AlchPlantsList Auto
-Formlist Property SB_AlchAnimalList Auto
+Formlist Property SB_Alchemy_SaltsList Auto
+Formlist Property SB_Alchemy_PoisonsList Auto
+Formlist Property SB_Alchemy_PlantsList Auto
+Formlist Property SB_Alchemy_AnimalList Auto
 
 ;---------- Mod Item Lists ----------
 Formlist Property SB_FirstAidItemsList Auto
@@ -107,6 +108,7 @@ ObjectReference Property SB_TwoHandedBox Auto
 ObjectReference Property SB_RangedBox Auto
 ObjectReference Property SB_AmmoBox Auto
 ObjectReference Property SB_EnchWeaponsBox Auto
+ObjectReference Property SB_EnchArmourBox Auto
 
 ;---------- Armour Storage Boxes ----------
 ObjectReference Property SB_HeavyArmourBox Auto
@@ -116,34 +118,38 @@ ObjectReference Property SB_ShieldsBox Auto
 ObjectReference Property SB_JewelryBox Auto
 
 ;---------- Smithing Storage Boxes ----------
-ObjectReference Property SB_OresBox Auto
-ObjectReference Property SB_IngotsBox Auto
-ObjectReference Property SB_GemsBox Auto
-ObjectReference Property SB_ScrapBox Auto
-ObjectReference Property SB_PeltsBox Auto
-ObjectReference Property SB_LinenLeathersBox Auto
+ObjectReference Property SB_Smithing_Ores Auto
+ObjectReference Property SB_Smithing_Ingots Auto
+ObjectReference Property SB_Smithing_Gems Auto
+ObjectReference Property SB_Smithing_Scrap Auto
+ObjectReference Property SB_Smithing_Pelts Auto
+ObjectReference Property SB_Smithing_LinenLeathers Auto
+ObjectReference Property SB_Smithing_Remains Auto
 
 ;---------- Enchanting Storage Boxes ----------
-ObjectReference Property SB_ScrollsBox Auto
-ObjectReference Property SB_FilledSoulGemsBox Auto
-ObjectReference Property SB_EmptySoulGemsBox Auto
+ObjectReference Property SB_Ench_Scrolls Auto
+ObjectReference Property SB_Ench_FilledSoulGems Auto
+ObjectReference Property SB_Ench_EmptySoulGems Auto
 
 ;---------- Alchemy Storage Boxes ----------
-ObjectReference Property SB_AlchemyIngredientsBox Auto
-ObjectReference Property SB_PotionsBox Auto
-ObjectReference Property SB_PoisonsBox Auto
-ObjectReference Property SB_RecipeBox Auto
+ObjectReference Property SB_Alchemy_AnimalIngredients Auto
+ObjectReference Property SB_Alchemy_PlantIngredients Auto
+ObjectReference Property SB_Alchemy_Ingredients Auto
+ObjectReference Property SB_Alchemy_Potions Auto
+ObjectReference Property SB_Alchemy_Poisons Auto
+ObjectReference Property SB_Alchemy_Recipes Auto
 
 ;---------- Foodstuffs Storage Boxes ----------
-ObjectReference Property SB_RawMeatBox Auto
-ObjectReference Property SB_FruitsVeggiesBox Auto
-ObjectReference Property SB_CheeseBox Auto
-ObjectReference Property SB_CookedFoodsBox Auto
-ObjectReference Property SB_BoozeBox Auto
-ObjectReference Property SB_DrinksBox Auto
-ObjectReference Property SB_BakedGoodsBox Auto
-ObjectReference Property SB_SweetsBox Auto
-ObjectReference Property SB_OtherFoodsBox Auto
+ObjectReference Property SB_Food_RawMeat Auto
+ObjectReference Property SB_Food_FruitsVeggies Auto
+ObjectReference Property SB_Food_Cheese Auto
+ObjectReference Property SB_Food_CookedFoods Auto
+ObjectReference Property SB_Food_Booze Auto
+ObjectReference Property SB_Food_Drinks Auto
+ObjectReference Property SB_Food_BakedGoods Auto
+ObjectReference Property SB_Food_Sweets Auto
+ObjectReference Property SB_Food_SoupStews Auto
+ObjectReference Property SB_Food_OtherFoods Auto
 
 ;---------- Book Storage ----------
 ObjectReference Property SB_SpellTomesCase Auto
@@ -156,8 +162,9 @@ ObjectReference Property SB_DishesBox Auto
 ObjectReference Property SB_BucketsBox Auto
 ObjectReference Property SB_HousePartsBox Auto
 ObjectReference Property SB_ToolsBox Auto
-ObjectReference Property SB_MiscBox Auto
+ObjectReference Property SB_Other_Misc Auto
 ObjectReference Property SB_WoodBox Auto
+ObjectReference Property SB_KeysBin Auto
 
 ;---------- Modded Items Storage Boxes ----------
 ObjectReference Property SB_FirstAidBox Auto
@@ -173,7 +180,7 @@ Event OnPlayerLoadGame()
 
 EndEvent
 
-
+; Missing: Pelts, Leather/Linens, Bones
 
 Function ProcessStuff()
 
@@ -195,7 +202,6 @@ Function ProcessStuff()
 	Debug.Notification ("Processing Items.")
 
 
-
 	While numForms > 0
 
 		numForms -= 1
@@ -206,22 +212,18 @@ Function ProcessStuff()
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemStaff))
 			SortBox(SB_StavesBox)
-;			SortStaves()
 		EndIf
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeStaff))
 			SortBox(SB_StavesBox)
-;			SortStaves()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemJewelry))
 			SortBox(SB_JewelryBox)
-;			SortJewelry()
 		EndIf
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(ArmorJewelry))
 			SortBox(SB_JewelryBox)
-;			SortJewelry()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemOreIngot))
@@ -229,73 +231,59 @@ Function ProcessStuff()
 		EndIf
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(ArmorShield))
-			SortBox(SB_ShieldsBox)
-;			SortShields()
+			SortBoxWithEnchantment(SB_ShieldsBox, SB_EnchArmourBox)
 		EndIf	
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(ArmorHeavy))
-			SortBox(SB_HeavyArmourBox)
-;			LgtHvyArmorSort()
+			SortBoxWithEnchantment(SB_HeavyArmourBox, SB_EnchArmourBox)
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(ArmorLight))
-			SortBox(SB_LightArmourBox)
-;			LgtHvyArmorSort()
+			SortBoxWithEnchantment(SB_LightArmourBox, SB_EnchArmourBox)
 		EndIf	
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemArrow))
 			SortBox(SB_AmmoBox)
-;			SortAmmo()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeBow))
-			SortBox(SB_RangedBox)
-;			SortRanged()
+			SortBoxWithEnchantment(SB_RangedBox, SB_EnchWeaponsBox)
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeWarhammer))
 			SortBox(SB_TwoHandedBox)
-;			SortWarhammers()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeBattleaxe))
 			SortBox(SB_TwoHandedBox)
-;			SortBattleaxes()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeGreatsword))
 			SortBox(SB_TwoHandedBox)
-;			SortGreatswords()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeWarAxe))
 			SortBox(SB_OneHandedBox)
-;			SortWaraxes()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeMace))
 			SortBox(SB_OneHandedBox)
-;			SortMaces()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeSword))
 			SortBox(SB_OneHandedBox)
-;			SortSwords()
 		EndIf
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(WeapTypeDagger))
 			SortBox(SB_OneHandedBox)
-;			SortDaggers()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemClothing))
 			SortBox(SB_ClothingBox)
-;			SortClothing()
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemIngredient))
-			SortBox(SB_AlchemyIngredientsBox)
-;			IngredientSort()
+			SortIngredients()
 		EndIf
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemSoulGem))
@@ -303,11 +291,11 @@ Function ProcessStuff()
 		EndIf	
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemGem))
-			SortGems()
+			SortBoxWithList(SB_Smithing_GemsList, SB_Smithing_Gems)
 		EndIf
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemFoodRaw))
-			SortRawFood()
+			SortBoxWithList(SB_Food_RawMeatList, SB_Food_RawMeat)
 		EndIf	
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemFood)) 
@@ -315,26 +303,21 @@ Function ProcessStuff()
 		EndIf	
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemScroll))
-			SortScrolls()
+			SortBox(SB_Ench_Scrolls)
 		EndIf
 
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemSpellTome))
-			SortSpellbooks()
+			SortBox(SB_SpellTomesCase)
 		EndIf	
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemRecipe))
-			SortBox(SB_RecipeBox)
-;			RecipeSort()
+			SortBox(SB_Alchemy_Recipes)
 		EndIf
 		
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemBook))
 			SortBooks()
 		EndIf	
-		
-		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemFirewood))
-			SortFirewood()
-		EndIf	
-		
+	
 		If ItemDone == 0 && (ItmForm.HasKeyword(VendorItemClutter))
 			SortClutter()
 		EndIf	
@@ -347,9 +330,9 @@ Function ProcessStuff()
 			SortPotions()
 		EndIf
 	;XXXXXXXXXXXXXXX CABOOSE CHECK XXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
 		
+		SortBoxWithList(SB_Smithing_RemainsList, SB_Smithing_Remains)
+
 		ItemDone = 0
 	EndWhile
 
@@ -357,271 +340,38 @@ Function ProcessStuff()
 	CrapOffLine = False
 
 	Debug.Notification ( "Finished processing items. Further manual sorting may be needed." )
-
-EndFunction
-
-
-
-Function SortStaves()
-	RemoveItem (ItmForm, ItemCount, True, SB_StavesBox)
-	ItemDone = 1
-	Return
-EndFunction
-
-
-Function SortScrolls()
-	RemoveItem(ItmForm, ItemCount, True, SB_ScrollsBox)
-	ItemDone = 1
-	Return		
-EndFunction
-
-
-Function SortJewelry()
-	RemoveItem(ItmForm, ItemCount, True, SB_JewelryBox)
-	ItemDone = 1
-	Return
 EndFunction
 
 
 Function SortOres()
-	If SB_OresList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_OresBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If SB_IngotsList.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, SB_IngotsBox)
-		ItemDone = 1
-		Return
-	EndIf
+	SortBoxWithList(SB_Smithing_OresList, SB_Smithing_Ores)
+	SortBoxWithList(SB_Smithing_IngotsList, SB_Smithing_Ingots)
 EndFunction
-
-
-Function SortShields()
-	If ItmForm.HasKeyword(ArmorShield)
-		RemoveItem(ItmForm, ItemCount, True, SB_ShieldsBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortRawFood()
-	If SB_RawMeatList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_RawMeatBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortAmmo()	
-	If ItmForm.HasKeyword(VendorItemArrow)
-		RemoveItem(ItmForm, ItemCount, True, SB_AmmoBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortRanged()
-	If ItmForm.HasKeyword(WeapTypeBow)
-		RemoveItem(ItmForm, ItemCount, True, SB_RangedBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
 
 
 Function SortSoulGems()
-	If SB_FilledSoulGemsList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_FilledSoulGemsBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If SB_EmptySoulGemsList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_EmptySoulGemsBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortArmours()
-	If ItmForm.HasKeyword(ArmorLight)
-		RemoveItem(ItmForm, ItemCount, True, SB_LightArmourBox)
-		ItemDone = 1
-		Return
-	EndIf
-
-	If ItmForm.HasKeyword(ArmorHeavy)
-		RemoveItem(ItmForm, ItemCount, True, SB_HeavyArmourBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortGems()
-	If SB_GemsList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_GemsBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortFirewood()
-	RemoveItem(ItmForm, ItemCount, True, SB_WoodBox)
-	ItemDone = 1
-	Return
+	SortBoxWithList(SB_Ench_FilledSoulGemsList, SB_Ench_FilledSoulGems)
+	SortBoxWithList(SB_Ench_EmptySoulGemsList, SB_Ench_EmptySoulGems)
 EndFunction
 
 
 Function SortFood()
-	If SB_FruitsVeggiesList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_FruitsVeggiesBox)
-		ItemDone = 1
-		Return
-	EndIf
-
-	If SB_CheeseList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_CheeseBox)
-		ItemDone = 1
-		Return
-	EndIf
-
-	If SB_CookedFoodsList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_CookedFoodsBox)
-		ItemDone = 1
-		Return
-	EndIf	
-
-	If SB_BoozeList.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_BoozeBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If SB_DrinksList.HasForm(ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_DrinksBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If SB_BakedGoodsList.HasForm(ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_BakedGoodsBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If SB_SweetsList.HasForm(ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, SB_SweetsBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	RemoveItem (ItmForm, ItemCount, True, SB_OtherFoodsBox)
-	ItemDone = 1
-	Return
-EndFunction
-
-
-Function SortWarhammers()
-	If ItmForm.HasKeyword(WeapTypeWarhammer)
-		RemoveItem(ItmForm, ItemCount, True, SB_TwoHandedBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortBattleaxes()
-	If ItmForm.HasKeyword(WeapTypeBattleaxe)
-		RemoveItem(ItmForm, ItemCount, True, SB_TwoHandedBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortGreatswords()
-	If ItmForm.HasKeyword(WeapTypeGreatsword)
-		RemoveItem(ItmForm, ItemCount, True, SB_TwoHandedBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortWaraxes()
-	If ItmForm.HasKeyword(WeapTypeWarAxe)
-		RemoveItem(ItmForm, ItemCount, True, SB_OneHandedBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortMaces()
-	If ItmForm.HasKeyword(WeapTypeMace)
-		RemoveItem(ItmForm, ItemCount, True, SB_OneHandedBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortSwords()
-	If ItmForm.HasKeyword(WeapTypeSword)
-		RemoveItem(ItmForm, ItemCount, True, SB_OneHandedBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortDaggers()
-	If ItmForm.HasKeyword(WeapTypeDagger)
-		RemoveItem(ItmForm, ItemCount, True, SB_OneHandedBox)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortSpellbooks()
-	If ItmForm.HasKeyword(VendorItemSpellTome)
-		RemoveItem(ItmForm, ItemCount, True, SB_SpellTomesCase)
-		ItemDone = 1
-		Return
-	EndIf
-EndFunction
-
-
-Function SortClothing()
-	RemoveItem (ItmForm, ItemCount, True, SB_ClothingBox)
-	ItemDone = 1
-	Return
-EndFunction
-
-
-Function SortHouseParts()
-	If  SB_HousePartsList.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, SB_HousePartsBox)
-		ItemDone = 1
-		Return
-	EndIf
+	SortBoxWithList(SB_Food_FruitsVeggiesList, SB_Food_FruitsVeggies)
+	SortBoxWithList(SB_Food_CheeseList, SB_Food_Cheese)
+	SortBoxWithList(SB_Food_CookedFoodsList, SB_Food_CookedFoods)
+	SortBoxWithList(SB_Food_BoozeList, SB_Food_Booze)
+	SortBoxWithList(SB_Food_DrinksList, SB_Food_Drinks)
+	SortBoxWithList(SB_Food_BakedGoodsList, SB_Food_BakedGoods)
+	SortBoxWithList(SB_Food_SoupStewsList, SB_Food_SoupStews)
+	SortBoxWithList(SB_Food_SweetsList, SB_Food_Sweets)
+	SortBox(SB_Food_OtherFoods)
 EndFunction
 
 
 Function SortIngredients()
-	RemoveItem (ItmForm, ItemCount, True, SB_AlchemyIngredientsBox)
-	ItemDone = 1
-	Return
+	SortBoxWithList(SB_Alchemy_AnimalList, SB_Alchemy_AnimalIngredients)
+	SortBoxWithList(SB_Alchemy_PlantsList, SB_Alchemy_PlantIngredients)
+	SortBox(SB_Alchemy_Ingredients)
 EndFunction
 
 
@@ -647,52 +397,21 @@ EndFunction
 
 
 Function SortClutter()
-	If  SB_CutleryList.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, SB_CutleryBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If  SB_DishesList.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, SB_DishesBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If  SB_BucketsList.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, SB_BucketsBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If  SB_ToolsList.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, SB_ToolsBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If  SB_HousePartsList.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, SB_HousePartsBox)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	RemoveItem (ItmForm, ItemCount, True, SB_MiscBox)
-	ItemDone = 1
+	SortBoxWithList(SB_CutleryList, SB_CutleryBox)
+	SortBoxWithList(SB_DishesList, SB_DishesBox)
+	SortBoxWithList(SB_BucketsList, SB_BucketsBox)
+	SortBoxWithList(SB_ToolsList, SB_ToolsBox)
+	SortBoxWithList(SB_WoodList, SB_WoodBox)
+	SortBoxWithList(SB_HousePartsList, SB_HousePartsBox)
+	SortBox(SB_Other_Misc)
 EndFunction
-
 
 
 Function SortPotions()
-	If  SB_PoisonsList.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, SB_PoisonsBox)
-		ItemDone = 1
-		Return
-	EndIf	
-	
-	RemoveItem (ItmForm, ItemCount, True, SB_PotionsBox)
-	ItemDone = 1
+	SortBoxWithList(SB_Alchemy_PoisonsList, SB_Alchemy_Poisons)
+	SortBox(SB_Alchemy_Potions)
 EndFunction
+
 
 
 
@@ -703,24 +422,29 @@ Function SortBox(ObjectReference akOtherContainer)
 EndFunction
 
 
-Function SortBoxWithList(FormList list, ObjectReference akOtherContainer)
-	If list.HasForm (ItmForm)
-		RemoveItem (ItmForm, ItemCount, True, akOtherContainer)
-		ItemDone = 1
-		Return
-	EndIf
+Function SortBoxWithEnchantment(ObjectReference akContainer, ObjectReference akOtherContainer)
+	Enchantment e = None
+
+    Weapon w = ItmForm as Weapon
+    Armor a = ItmForm as Armor
+
+    If w
+        e = w.GetEnchantment()
+    ElseIf a
+        e = a.GetEnchantment()
+    EndIf
+	
+    If (e == None)
+        SortBox(akContainer)
+    Else
+        SortBox(akOtherContainer)
+    EndIf
 EndFunction
 
 
-Function SortBoxWithListAndKeyword(FormList list, Keyword word, ObjectReference akOtherContainer)
-	If  list.HasForm(ItmForm)
-		RemoveItem(ItmForm, ItemCount, True, akOtherContainer)
-		ItemDone = 1
-		Return
-	EndIf
-	
-	If ItmForm.HasKeyword(word)
-		RemoveItem(ItmForm, ItemCount, True, akOtherContainer)
+Function SortBoxWithList(FormList list, ObjectReference akOtherContainer)
+	If list.HasForm (ItmForm)
+		RemoveItem (ItmForm, ItemCount, True, akOtherContainer)
 		ItemDone = 1
 		Return
 	EndIf
