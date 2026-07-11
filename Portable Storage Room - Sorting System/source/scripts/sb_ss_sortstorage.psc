@@ -77,12 +77,12 @@ Formlist Property SB_Food_SweetsList Auto
 Formlist Property SB_Food_IngredientsList Auto
 
 ;---------- Misc Stuff Lists ----------
-Formlist Property SB_CutleryList Auto
-Formlist Property SB_DishesList Auto
-Formlist Property SB_BucketsList Auto
-Formlist Property SB_HousePartsList Auto
-Formlist Property SB_ToolsList Auto
-Formlist Property SB_WoodList Auto
+Formlist Property SB_Other_CutleryList Auto
+Formlist Property SB_Other_DishesList Auto
+Formlist Property SB_Other_BucketsList Auto
+Formlist Property SB_Other_HousePartsList Auto
+Formlist Property SB_Other_ToolsList Auto
+Formlist Property SB_Other_WoodList Auto
 
 ;---------- Book Lists ----------
 Formlist Property SB_NotesList Auto
@@ -157,22 +157,22 @@ ObjectReference Property SB_NormalBooksCase Auto
 ObjectReference Property SB_NotesBox Auto
 
 ;---------- Misc Items Storage Boxes ----------
-ObjectReference Property SB_CutleryBox Auto
-ObjectReference Property SB_DishesBox Auto
-ObjectReference Property SB_BucketsBox Auto
-ObjectReference Property SB_HousePartsBox Auto
-ObjectReference Property SB_ToolsBox Auto
+ObjectReference Property SB_Other_Cutlery Auto
+ObjectReference Property SB_Other_Dishes Auto
+ObjectReference Property SB_Other_Buckets Auto
+ObjectReference Property SB_Other_HouseParts Auto
+ObjectReference Property SB_Other_Tools Auto
 ObjectReference Property SB_Other_Misc Auto
-ObjectReference Property SB_WoodBox Auto
-ObjectReference Property SB_KeysBin Auto
+ObjectReference Property SB_Other_Wood Auto
+ObjectReference Property SB_Other_Keys Auto
 
 ;---------- Modded Items Storage Boxes ----------
-ObjectReference Property SB_FirstAidBox Auto
-ObjectReference Property SB_CampingGearBox Auto
-ObjectReference Property SB_SurvivalGearBox  Auto
+ObjectReference Property SB_Mods_FirstAidBox Auto
+ObjectReference Property SB_Mods_CampingGearBox Auto
+ObjectReference Property SB_Mods_SurvivalGearBox  Auto
 
 ;---------- General catch all box of sh*t ----------
-ObjectReference Property SB_UnsortedBox Auto
+ObjectReference Property SB_Unsorted Auto
 
 
 Event OnPlayerLoadGame()
@@ -324,7 +324,7 @@ Function ProcessStuff()
 		
 		If ItemDone == 0 && ( ItmForm.HasKeyword(VendorItemPotion))
 			SortPotions()
-			EndIf
+		EndIf
 
 		If ItemDone == 0 && ( ItmForm.HasKeyword(VendorItemPoison))
 			SortPotions()
@@ -332,7 +332,10 @@ Function ProcessStuff()
 	;XXXXXXXXXXXXXXX CABOOSE CHECK XXXXXXXXXXXXXXXXXXXXXXXXXX
 		
 		SortBoxWithList(SB_Smithing_RemainsList, SB_Smithing_Remains)
-
+		SortBoxWithList(SB_Smithing_PeltsList, SB_Smithing_Pelts)
+		SortBoxWithList(SB_Smithing_LinensLeathersList, SB_Smithing_LinenLeathers)
+		
+		SortBox(SB_UnsortedBox)
 		ItemDone = 0
 	EndWhile
 
@@ -397,12 +400,12 @@ EndFunction
 
 
 Function SortClutter()
-	SortBoxWithList(SB_CutleryList, SB_CutleryBox)
-	SortBoxWithList(SB_DishesList, SB_DishesBox)
-	SortBoxWithList(SB_BucketsList, SB_BucketsBox)
-	SortBoxWithList(SB_ToolsList, SB_ToolsBox)
-	SortBoxWithList(SB_WoodList, SB_WoodBox)
-	SortBoxWithList(SB_HousePartsList, SB_HousePartsBox)
+	SortBoxWithList(SB_Other_CutleryList, SB_Other_Cutlery)
+	SortBoxWithList(SB_Other_DishesList, SB_Other_Dishes)
+	SortBoxWithList(SB_Other_BucketsList, SB_Other_Buckets)
+	SortBoxWithList(SB_Other_ToolsList, SB_Other_Tools)
+	SortBoxWithList(SB_Other_WoodList, SB_Other_Wood)
+	SortBoxWithList(SB_Other_HousePartsList, SB_Other_HouseParts)
 	SortBox(SB_Other_Misc)
 EndFunction
 
