@@ -1,8 +1,8 @@
-Scriptname UnicornRaceController extends Quest  
+Scriptname EarthPonyRaceController extends Quest  
 
-FormList Property UnicornRaceHeadParts  Auto  
+FormList Property PonyRaces  Auto  
 
-FormList Property UnicornRaceHeadPartsVampire  Auto  
+FormList Property PonyRacesVampire  Auto  
 
 GenericRaceController Property raceController Auto
 
@@ -17,10 +17,11 @@ Event OnInit()
 	raceController.NewHighElfVampire = none
 	raceController.NewImperial = none
 	raceController.NewImperialVampire = none
-	raceController.NewKhajiit = UnicornRaceHeadParts
-	raceController.NewKhajiitVampire = UnicornRaceHeadPartsVampire
+	raceController.NewKhajiit = PonyRaces
+	raceController.NewKhajiitVampire = PonyRacesVampire
 	raceController.NewNord = none
 	raceController.NewNordVampire = none
+	raceController.NewOrc = none
 	raceController.NewOrcVampire = none
 	raceController.NewRedguard = none
 	raceController.NewRedguardVampire = none
