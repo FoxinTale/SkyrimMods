@@ -8,32 +8,34 @@ String Property CATEGORY_KEY = "racemenu_ponytails" AutoReadOnly
 
 Actor Property PlayerRef Auto
 
-
 FormList Property PonyTailList Auto ; The list of tails. 
 
-Float PonyTailType = 0.0
-
-
-Float PonyTailCount = PonyTailList.GetSize() as Float ; aaaaaa
-
+Float PonyTailType
+Float PonyTailCount
 
 Int TailType = 1 ; Default 1
-
 
 ;---------------------------------------------------------------------------------------------------------------------
 ; Events.
 
-
-String BodyString = ""
-
 ; Runs when the script initialises for the very first time.
+; Most of this is just sanity checking for the scripting process. I have zero trust in this buggy ass game and its scripting language.
+; It sometimes just forgets what it was doing and starts drooling.
 Event OnInit()
 	Parent.OnInit()
 	Version = RM_PONYTAIL_VERSION
 	RegisterForMenu("RaceSex Menu") ; RaceMenu, or the character creation menu name.
 	
-	If(!PlayerRef) ; Null check. It can happen sometimes when Papyrus loses its goddamn mind.
+	If(!PlayerRef)
 		PlayerRef = Game.GetPlayer()
+	EndIf
+	
+	If(PonyTailCount == 0.0)
+		PonyTailCount = PonyTailList.GetSize() as Float
+	EndIf
+	
+	If(PonyTailList == none)
+		PonyTailList = Game.GetFormFromFile(0x85A, "Pony Races.esp") as Formlist
 	EndIf
 EndEvent
 
@@ -60,13 +62,13 @@ EndEvent
 
 ; When it is time for slider creations, create them and set their appropriate values.
 Event OnSliderRequest(Actor player, ActorBase playerBase, Race actorRace, bool isFemale)
-	AddSliderEx("Tail Type", CATEGORY_KEY, "pony_tail_type", 0.0, PonyTailCount, 1.0, PonyTailType) 
+	AddSliderEx("Tail Type", CATEGORY_KEY, "ponytail_type", 0.0, PonyTailCount, 1.0, PonyTailType) 
 EndEvent
 
 
 ; when the RaceMenu slider is changed...
 Event OnSliderChanged(string callback, float value)
-	If(callback == "pony_tailtype")
+	If(callback == "ponytail_type")
 		If(value <= PonyTailCount)
 			PonyTailType = value
 			TailType = value as Int
@@ -84,4 +86,11 @@ Function SetTailType()
 	PlayerRef.AddItem(NewTail, 1, true)
 	PlayerRef.EquipItem(NewTail, true, true)
 	PlayerRef.QueueNiNodeUpdate()
+EndFunction
+
+
+
+Function RaceCheck()
+
+
 EndFunction
